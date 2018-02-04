@@ -1,5 +1,5 @@
 def adjacencyMatrix(nodes, edges):
-    A = [[0]*nodes]*nodes
+    A = [[0]*nodes for _ in range(nodes)]
 
     for i in range(edges):
         print("Enter edge {0}: ".format(i+1))
@@ -19,4 +19,5 @@ def adjacencyList(nodes, edges, isDirect = False):
         if not isDirect:
             A[y].append(x)
     return A
+
 
